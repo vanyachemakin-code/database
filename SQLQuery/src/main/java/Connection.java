@@ -22,7 +22,7 @@ public class Connection {
         try {
             connection = DriverManager.getConnection(url, user, pass);
             statement = connection.createStatement();
-        } catch (SQLException e) { e.printStackTrace(); }
+        } catch (SQLException e) { throw new RuntimeException(e); }
     }
 
     public static void close() {
@@ -42,6 +42,6 @@ public class Connection {
                             "FROM PurchaseList pl " +
                             "ORDER BY pl.course_name, pl.subscription_date;"
             );
-        } catch (SQLException e) { e.printStackTrace(); }
+        } catch (SQLException e) { throw new RuntimeException(e); }
     }
 }

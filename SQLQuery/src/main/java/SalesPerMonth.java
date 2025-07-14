@@ -2,7 +2,7 @@ import java.util.*;
 
 public class SalesPerMonth {
 
-    private List<String> averageSalesForCourses = new ArrayList<>();
+    private final List<String> averageSalesForCourses = new ArrayList<>();
 
     public SalesPerMonth(Map<String, List<Date>> subscriptions) {
         getAverage(subscriptions);
