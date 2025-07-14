@@ -13,11 +13,11 @@
         <property name="current_session_context_class">thread</property>
         <property name="hbm2ddl.auto">update</property>
 
-        <mapping class="database.tables.Course"></mapping>
-        <mapping class="database.tables.PurchaseList"></mapping>
-        <mapping class="database.tables.Student"></mapping>
-        <mapping class="database.tables.Subscription"></mapping>
-        <mapping class="database.tables.Teacher"></mapping>
-        <mapping class="database.tables.LinkedPurchaseList"></mapping>
+        <mapping class="database.tables.Course"/>
+        <mapping class="database.tables.PurchaseList"/>
+        <mapping class="database.tables.Student"/>
+        <mapping class="database.tables.Subscription"/>
+        <mapping class="database.tables.Teacher"/>
+        <mapping class="database.tables.LinkedPurchaseList"/>
     </session-factory>
 </hibernate-configuration>

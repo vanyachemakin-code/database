@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ConvertPurchaseList {
 
-    private List<Student> students = new ArrayList<>();
+    private List students = new ArrayList<>();
     private List<Course> courses = new ArrayList<>();
     private List<PurchaseList> purchaseLists = new ArrayList<>();
 
@@ -21,19 +21,19 @@ public class ConvertPurchaseList {
 
     private List<Student> getStudents() {
         String sql = "FROM " + Student.class.getSimpleName();
-        List<Student> students = Connection.getSession().createQuery(sql).list();
+        students = Connection.getSession().createQuery(sql).list();
         return students;
     }
 
     private List<Course> getCourses() {
         String sql = "FROM " + Course.class.getSimpleName();
-        List<Course> courses = Connection.getSession().createQuery(sql).list();
+        courses = Connection.getSession().createQuery(sql).list();
         return courses;
     }
 
     private List<PurchaseList> getPurchaseList() {
         String sql = "FROM " + PurchaseList.class.getSimpleName();
-        List<PurchaseList> purchaseLists = Connection.getSession().createQuery(sql).list();
+        purchaseLists = Connection.getSession().createQuery(sql).list();
         return purchaseLists;
     }
 

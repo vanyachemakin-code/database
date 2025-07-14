@@ -1,4 +1,3 @@
-
 public class Statistics {
 
     private static final String USER = "root";
