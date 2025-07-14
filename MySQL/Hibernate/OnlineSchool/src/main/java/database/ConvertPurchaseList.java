@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ConvertPurchaseList {
 
-    private List students = new ArrayList<>();
+    private List<Student> students = new ArrayList<>();
     private List<Course> courses = new ArrayList<>();
     private List<PurchaseList> purchaseLists = new ArrayList<>();
 
