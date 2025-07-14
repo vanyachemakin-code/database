@@ -4,7 +4,6 @@ import redis.clients.jedis.UnifiedJedis;
 import java.util.*;
 
 import static java.lang.System.out;
-import static java.lang.Thread.sleep;
 
 public class DatingSite {
 
@@ -43,7 +42,7 @@ public class DatingSite {
     }
 
     public void print() {
-        while (true) {
+        for (;;) {
             log = new ArrayList<>();
             for (String user : users) {
                 if (!log.contains(user) ) {
@@ -54,7 +53,7 @@ public class DatingSite {
                 }
             }
             try {
-                sleep(1000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
