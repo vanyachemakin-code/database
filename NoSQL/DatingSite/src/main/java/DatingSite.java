@@ -7,7 +7,7 @@ import static java.lang.System.out;
 
 public class DatingSite {
 
-    private UnifiedJedis jedis;
+    private final UnifiedJedis jedis;
     private List<String> users = new ArrayList<>();
     private List<String> log = new ArrayList<>();
 
