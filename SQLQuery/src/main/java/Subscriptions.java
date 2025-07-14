@@ -35,6 +35,6 @@ public class Subscriptions {
                     subscriptionToTheCourse.put(name.getFirst(), date);
                 }
             }
-        } catch (Exception e) { e.printStackTrace(); }
+        } catch (Exception e) { throw new RuntimeException(e); }
     }
 }
