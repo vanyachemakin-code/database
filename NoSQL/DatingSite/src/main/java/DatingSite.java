@@ -4,6 +4,7 @@ import redis.clients.jedis.UnifiedJedis;
 import java.util.*;
 
 import static java.lang.System.out;
+import static java.lang.Thread.sleep;
 
 public class DatingSite {
 
@@ -53,7 +54,7 @@ public class DatingSite {
                 }
             }
             try {
-                Thread.sleep(1000);
+                sleep(1000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
