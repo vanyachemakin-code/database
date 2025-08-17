@@ -1,8 +1,8 @@
 public class Statistics {
 
-    private static final String USER = "root";
-    private static final String PASS = "ajfj39jfk124jdka";
-    private static final String URL = "jdbc:mysql://localhost:3306/skillbox";
+    private static final String USER = "user";
+    private static final String PASS = "some pass";
+    private static final String URL = "jdbc:mysql://localhost:3306/database";
 
     public static void main(String[] args) {
         Connection connection = new Connection(URL, USER, PASS);
