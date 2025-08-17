@@ -15,10 +15,6 @@ public class ConvertPurchaseList {
     private List<Course> courses = new ArrayList<>();
     private List<PurchaseList> purchaseLists = new ArrayList<>();
 
-    public ConvertPurchaseList() {
-        setIds();
-    }
-
     private List<Student> getStudents() {
         String sql = "FROM " + Student.class.getSimpleName();
         students = Connection.getSession().createQuery(sql).list();
@@ -37,7 +33,7 @@ public class ConvertPurchaseList {
         return purchaseLists;
     }
 
-    private void setIds() {
+    public void setIds() {
         List<Integer> studentId  = new ArrayList<>();
         List<Integer> courseId = new ArrayList<>();
 
