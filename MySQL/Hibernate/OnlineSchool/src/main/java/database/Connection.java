@@ -12,10 +12,6 @@ public class Connection {
     private static SessionFactory sessionFactory;
     private static Session session;
 
-    public Connection() {
-        openSession();
-    }
-
     public static SessionFactory getSessionFactory() {
         return sessionFactory;
     }
@@ -24,7 +20,7 @@ public class Connection {
         return session;
     }
 
-    private void openSession() {
+    public void openSession() {
         StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .configure("hibernate.cfg.xml").build();
         Metadata metadata = new MetadataSources(registry).getMetadataBuilder().build();
@@ -32,7 +28,7 @@ public class Connection {
         session = sessionFactory.openSession();
     }
 
-    public static void closeSession() {
+    public void closeSession() {
         session.close();
         sessionFactory.close();
     }
